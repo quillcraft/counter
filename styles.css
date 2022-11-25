@@ -1,0 +1,56 @@
+/* common ------------------------------------ */
+
+:root {
+    --num-width: 40px;
+    --num-height: 60px;
+    --num-digits: 6;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: var(--num-height);
+    line-height: var(--num-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+/* app --------------------------------------- */
+
+#app {
+    position: relative;
+    display: block;
+}
+
+.counter {
+    overflow: hidden;
+    border: 2px solid #000;
+    border-radius: 5px;
+
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--num-width) * var(--num-digits));
+    height: var(--num-height);
+}
+
+.roller {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: all .25s ease-out;
+}
+
+.digit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--num-width);
+    height: 100%;
+}
