@@ -1,7 +1,7 @@
 export default class Counter {
 	constructor(props) {
 		this.root = props.root
-		this.number = props.number
+		this.number = Math.round(Math.random() * 1e6)
 
 		this.format = /\d+/
 		this.doc = window.getComputedStyle(document.documentElement)
@@ -36,9 +36,10 @@ export default class Counter {
 	}
 
 	start() {
+		const number = Math.round(Math.random() * 1e6)
 		const rollers = Array.from(this.counter.children)
 		rollers.forEach((roller, i) => {
-			const m = String(this.number).split('')[i]
+			const m = String(number).split('')[i]
 			roller.style.top = `${-m * this.numHeight}px`
 			roller.style.left = `${i * this.numWidth}px`
 		})
