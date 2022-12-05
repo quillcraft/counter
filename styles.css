@@ -30,7 +30,12 @@ body {
     border: 2px solid #000;
     border-radius: 5px;
 
-    position: relative;
+	-webkit-pointer-events: none;
+	-webkit-user-select: none;
+	pointer-events: none;
+	user-select: none;
+
+	position: relative;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -40,7 +45,12 @@ body {
 }
 
 .roller {
-    position: absolute;
+	-webkit-pointer-events: none;
+	-webkit-user-select: none;
+	pointer-events: none;
+	user-select: none;
+
+	position: absolute;
     top: 0;
     left: 0;
 
@@ -48,7 +58,12 @@ body {
 }
 
 .digit {
-    display: flex;
+	-webkit-pointer-events: none;
+	-webkit-user-select: none;
+	pointer-events: none;
+	user-select: none;
+
+	display: flex;
     align-items: center;
     justify-content: center;
     width: var(--num-width);

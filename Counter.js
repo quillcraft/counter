@@ -20,8 +20,8 @@ export default class Counter {
 			roller.style.top = `0px`
 			roller.style.left = `${i * this.numWidth}px`
 
-			const range = new Array(10).fill(0)
-			range.forEach((n, j) => {
+			const range = [...Array(10).keys()]
+			range.forEach(j => {
 				const digit = document.createElement('div')
 				digit.classList.add('digit')
 
@@ -41,7 +41,6 @@ export default class Counter {
 		rollers.forEach((roller, i) => {
 			const m = String(number).split('')[i]
 			roller.style.top = `${-m * this.numHeight}px`
-			roller.style.left = `${i * this.numWidth}px`
 		})
 	}
 }
