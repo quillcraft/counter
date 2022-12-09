@@ -37,10 +37,10 @@ export default class Counter {
 
 	start() {
 		const number = Math.round(Math.random() * 1e6)
+		const digits = String(number).split('')
 		const rollers = Array.from(this.counter.children)
 		rollers.forEach((roller, i) => {
-			const m = String(number).split('')[i]
-			roller.style.top = `${-m * this.numHeight}px`
+			roller.style.top = `${-digits[i] * this.numHeight}px`
 		})
 	}
 }
